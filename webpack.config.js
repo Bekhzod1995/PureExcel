@@ -45,6 +45,7 @@ module.exports = {
   devServer: {
     port: 3888,
     hot: isDev,
+    watchContentBase: true,
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -84,7 +85,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.m?js$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: jsLoaders(),
       },
